@@ -105,10 +105,10 @@ void getpath(int s, int d){
 int main(){
 
     int a, b, w, s, d;
-    //FILE *p = fopen("input.txt", "r");//uncomment if u want to take input from input.txt file
+    FILE *p = fopen("input.txt", "r");//if u want to take input from input.txt file.
     while(true){
-        //fscanf(p, "%d %d %d", &a, &b, &w);//uncomment if u want to take input from input.txt file
-        cin>>a>>b>>w;//if you want to give input
+        fscanf(p, "%d %d %d", &a, &b, &w);//if u want to take input from input.txt file,if not make it as comment and uncomment line 111.
+        //cin>>a>>b>>w;//if you want to give input
         if(a == 0 && b == 0){
             break;
         }
@@ -134,8 +134,8 @@ int main(){
         for(int i = 1; i <= node; i++){
             dijkstra(i);
         }
-       // fscanf(p, "%d %d", &s, &d); //uncomment if u want to take input from input.txt file
-       cin>>s>>d; //if you want to give input
+        fscanf(p, "%d %d", &s, &d); //if u want to take input from input.txt file, if not make it as comment and uncomment line 138.
+       //cin>>s>>d; //if you want to give input
         getpath(s, d);
 
     }
